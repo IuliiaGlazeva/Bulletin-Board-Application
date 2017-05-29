@@ -1,3 +1,6 @@
+//Bulletin Board Application Create a website that allows people to post messages to a page. 
+//A message consists of a title and a body. The site should have two pages:
+
 var pg = require('pg');
 var express = require('express');
 var app = express();
@@ -10,6 +13,9 @@ app.set('view engine', 'pug');
 app.use('/', bodyParser);
 
 var connectionString = 'postgres://' + process.env.POSTGRES_USER + ':' + process.env.POSTGRES_PASSWORD + '@localhost/bulletin_board';
+
+
+//The first page shows people a form where they can add a new message.
 
 app.get('/', (req, res)=>{
 	pg.connect(connectionString, function(err, client, done){
@@ -27,6 +33,7 @@ app.get('/', (req, res)=>{
 	
 });
 
+//The second page shows each of the messages people have posted. Make sure there's a way to navigate the site so users can access each page.
 
 app.get('/messages', (req, res) =>{
 	res.render('index');
