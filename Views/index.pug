@@ -1,8 +1,18 @@
 html
 	head
-		title Messages
-		body
-			p
-				form(action="/", method="POST")
-					input(name='first name')
-				
+		style
+			include style.css
+		script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+	title Bulletin Board
+	body
+		div(class="board")
+			div(class="title")
+				p Hey there! Any questions?
+			div(class="message")
+				form(action="/message", method="POST")
+					textarea(name="input", id="BulletinBoard", placeholder="Type your message...")
+					br
+					br
+					input(type="submit", value="Submit")
+
+
