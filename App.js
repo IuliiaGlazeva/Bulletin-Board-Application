@@ -33,6 +33,7 @@ app.get('/', (req, res)=>{
 	
 });
 
+
 //The second page shows each of the messages people have posted. Make sure there's a way to navigate the site so users can access each page.
 
 app.get('/messages', (req, res) =>{
