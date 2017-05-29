@@ -2,14 +2,12 @@ html
 	head
 		style
 			include style.css
-		script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script
 		title Bulletin Board
 	body
 		div(class="board")
 			div(class="message")
 				form(action="/messages", method="POST")
-					input(name="title", type="text", placeholder="Hey there! Any questions?")
-					textarea(name="body", id="BulletinBoard", placeholder="Type your message...")
-					br
-					br
-					input(type="submit", value="Submit")
+					input(type="text", placeholder="Hey there! Any questions?", name="title" required)
+					textarea(name="body", id="BulletinBoard", placeholder="Type your message...", rows="4", cols="50", class="message")
+					input(type="submit", value="Submit", name="submit", class="btn")
