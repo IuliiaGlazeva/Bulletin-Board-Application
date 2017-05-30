@@ -8,6 +8,6 @@ html
 		div(class="board")
 			div(class="message")
 				form(action="/messages", method="POST")
-					input(type="text", placeholder="Hey there! Any questions?", name="title" required)
-					textarea(name="body", id="BulletinBoard", placeholder="Type your message...", rows="4", cols="50", class="message")
+					input(type="text", placeholder="Hey there! Any questions?", name="title" required, maxlength="40")
+					textarea(name="body", id="BulletinBoard", placeholder="Type your message...", rows="4", cols="50", class="message"  required)
 					input(type="submit", value="Submit", name="submit", class="btn")
